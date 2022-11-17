@@ -1,2 +1,123 @@
-@use './variables';
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap');
+@use "./variables";
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  font-family: "Red Hat Display", sans-serif;
+}
+body {
+  background-color: variables.$alabaster;
+}
+
+button {
+  width: 10rem;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  font-weight: 900;
+  margin: 0.4rem 0;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+  border: none;
+  cursor: pointer;
+}
+
+#hero-banner {
+  overflow: hidden;
+  img {
+    width: 110%;
+    transform: translateX(-16px);
+  }
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .section__overline {
+    font-size: 1rem;
+    letter-spacing: 0.25rem;
+    color: variables.$secondary-color;
+  }
+}
+
+.section__button--blue {
+  background-color: variables.$secondary-color;
+  color: variables.$alabaster;
+  &:hover {
+    background-color: #71c0d4;
+  }
+
+  span {
+    color: variables.$mailbu;
+  }
+}
+.section__button {
+  background-color: variables.$deluge;
+  color: variables.$alabaster;
+
+  &:hover {
+    background-color: #b18bdd;
+  }
+  span {
+    color: variables.$mauve;
+  }
+}
+.section__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // gap: 1.2rem 0;
+}
+
+.section__header {
+  text-align: center;
+  font-size: 3rem;
+  line-height: 3.3rem;
+  padding: 2rem 0;
+}
+
+.section__desc {
+  line-height: 1.5rem;
+  font-size: 1.1rem;
+  text-align: center;
+  color: variables.$manatee;
+  padding-bottom: 2rem;
+}
+#logo {
+  padding: 2rem 0;
+}
+.section__line {
+  border-left: 0.01px solid variables.$manatee;
+  height: 4rem;
+  opacity: 0.25;
+  margin-top: 2.5rem;
+}
+.section__number {
+  border: lighten($color: variables.$manatee, $amount: 25%) 1px solid;
+  border-radius: 50%;
+  padding: 0.8rem;
+
+  p {
+    font-weight: 900;
+    font-size: 1rem;
+    color: variables.$manatee;
+    opacity: 1;
+  }
+}
+
+.section__imageContainer {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 2rem 0;
+  img {
+    width: 130px;
+    height: auto;
+    border-radius: 5%;
+  }
+}

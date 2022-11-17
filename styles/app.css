@@ -1,1 +1,123 @@
-@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap");/*# sourceMappingURL=app.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+button {
+  width: 10rem;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  font-weight: 900;
+  margin: 0.4rem 0;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+  border: none;
+  cursor: pointer;
+}
+
+#hero-banner {
+  overflow: hidden;
+}
+#hero-banner img {
+  width: 110%;
+  transform: translateX(-16px);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section .section__overline {
+  font-size: 1rem;
+  letter-spacing: 0.25rem;
+  color: #4d96a9;
+}
+
+.section__button--blue {
+  background-color: #4d96a9;
+  color: #fafafa;
+}
+.section__button--blue:hover {
+  background-color: #71c0d4;
+}
+.section__button--blue span {
+  color: #8fe3f9;
+}
+
+.section__button {
+  background-color: #855fb1;
+  color: #fafafa;
+}
+.section__button:hover {
+  background-color: #b18bdd;
+}
+.section__button span {
+  color: #d9b8ff;
+}
+
+.section__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section__header {
+  text-align: center;
+  font-size: 3rem;
+  line-height: 3.3rem;
+  padding: 2rem 0;
+}
+
+.section__desc {
+  line-height: 1.5rem;
+  font-size: 1.1rem;
+  text-align: center;
+  color: #87879d;
+  padding-bottom: 2rem;
+}
+
+#logo {
+  padding: 2rem 0;
+}
+
+.section__line {
+  border-left: 0.01px solid #87879d;
+  height: 4rem;
+  opacity: 0.25;
+  margin-top: 2.5rem;
+}
+
+.section__number {
+  border: #cdcdd6 1px solid;
+  border-radius: 50%;
+  padding: 0.8rem;
+}
+.section__number p {
+  font-weight: 900;
+  font-size: 1rem;
+  color: #87879d;
+  opacity: 1;
+}
+
+.section__imageContainer {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 2rem 0;
+}
+.section__imageContainer img {
+  width: 130px;
+  height: auto;
+  border-radius: 5%;
+}/*# sourceMappingURL=app.css.map */
