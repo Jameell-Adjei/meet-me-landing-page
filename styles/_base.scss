@@ -1,4 +1,5 @@
 @use "./variables";
+@use "./mixins";
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;900&display=swap");
 
 * {
@@ -31,6 +32,11 @@ button {
   img {
     width: 110%;
     transform: translateX(-16px);
+
+    @include mixins.breakpoint("tablet"){
+      width: 108%;
+      transform: translateX(-27px);
+    }
   }
 }
 
@@ -49,8 +55,9 @@ button {
 .section__button--blue {
   background-color: variables.$secondary-color;
   color: variables.$alabaster;
+  
   &:hover {
-    background-color: #71c0d4;
+    background-color: variables.$downy;
   }
 
   span {
@@ -63,6 +70,9 @@ button {
 
   &:hover {
     background-color: #b18bdd;
+    @include mixins.breakpoint("tablet"){
+      background-color: variables.$lavender;
+    }
   }
   span {
     color: variables.$mauve;
@@ -94,6 +104,10 @@ button {
   color: variables.$manatee;
   padding: 0 1rem;
   padding-bottom: 2rem;
+  max-width: 38ch;
+  @include mixins.breakpoint("tablet"){
+    max-width: 52ch;
+  }
 }
 #logo {
   padding: 2rem 0;
@@ -108,6 +122,8 @@ button {
   border: lighten($color: variables.$manatee, $amount: 25%) 1px solid;
   border-radius: 50%;
   padding: 0.8rem;
+  background-color: variables.$alabaster;
+
 
   p {
     font-weight: 900;
@@ -123,6 +139,9 @@ button {
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   padding: 2rem 0;
+  @include mixins.breakpoint("tablet"){
+    display: block;
+  }
   img {
     width: 130px;
     height: auto;
@@ -161,5 +180,20 @@ footer {
     color: variables.$primary-color;
     padding: 2rem 0;
     max-width: 27ch;
+  }
+}
+
+#small-button {
+  width: 9rem;
+}
+
+.section__buttonContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  @include mixins.breakpoint("tablet"){
+    flex-direction: row;
+    gap: 0 1rem;
   }
 }

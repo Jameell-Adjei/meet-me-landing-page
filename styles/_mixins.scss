@@ -1,0 +1,13 @@
+// Breakpoints map: 1em = 16px
+
+$breakpoints: ( 
+    tablet : 43.75em,
+);
+
+
+
+@mixin breakpoint ($size) {
+    @media (min-width: map-get($breakpoints, $size)) {
+        @content;
+    }
+}

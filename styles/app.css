@@ -12,14 +12,18 @@ body {
   background-color: #fafafa;
 }
 
+p, h1, h2 {
+  text-align: center;
+}
+
 button {
-  width: 10rem;
-  padding: 0.5rem;
+  width: 12rem;
+  padding: 1rem;
   border-radius: 2rem;
-  font-weight: 900;
+  font-weight: 700;
   margin: 0.4rem 0;
   text-decoration: none;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.25s ease-in-out;
   border: none;
   cursor: pointer;
 }
@@ -30,6 +34,12 @@ button {
 #hero-banner img {
   width: 110%;
   transform: translateX(-16px);
+}
+@media (min-width: 43.75em) {
+  #hero-banner img {
+    width: 108%;
+    transform: translateX(-27px);
+  }
 }
 
 .section {
@@ -48,7 +58,7 @@ button {
   color: #fafafa;
 }
 .section__button--blue:hover {
-  background-color: #71c0d4;
+  background-color: #71C0D4;
 }
 .section__button--blue span {
   color: #8fe3f9;
@@ -61,6 +71,11 @@ button {
 .section__button:hover {
   background-color: #b18bdd;
 }
+@media (min-width: 43.75em) {
+  .section__button:hover {
+    background-color: #b18bdd;
+  }
+}
 .section__button span {
   color: #d9b8ff;
 }
@@ -72,18 +87,31 @@ button {
 }
 
 .section__header {
-  text-align: center;
-  font-size: 3rem;
-  line-height: 3.3rem;
-  padding: 2rem 0;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  padding: 2rem 1rem;
+  max-width: 10ch;
+}
+
+.section__header2 {
+  line-height: 2.1rem;
+  max-width: 14ch;
+  padding: 2rem 0.8rem;
+  font-size: 2rem;
 }
 
 .section__desc {
   line-height: 1.5rem;
-  font-size: 1.1rem;
-  text-align: center;
+  font-size: 1rem;
   color: #87879d;
+  padding: 0 1rem;
   padding-bottom: 2rem;
+  max-width: 38ch;
+}
+@media (min-width: 43.75em) {
+  .section__desc {
+    max-width: 52ch;
+  }
 }
 
 #logo {
@@ -101,6 +129,7 @@ button {
   border: #cdcdd6 1px solid;
   border-radius: 50%;
   padding: 0.8rem;
+  background-color: #fafafa;
 }
 .section__number p {
   font-weight: 900;
@@ -116,8 +145,63 @@ button {
   gap: 1rem;
   padding: 2rem 0;
 }
+@media (min-width: 43.75em) {
+  .section__imageContainer {
+    display: block;
+  }
+}
 .section__imageContainer img {
   width: 130px;
   height: auto;
   border-radius: 5%;
+}
+@media (min-width: 43.75em) {
+  .section__imageContainer img {
+    width: 9rem;
+    margin: 0 0.2rem;
+  }
+}
+
+#number_padding {
+  padding-bottom: 0rem;
+}
+
+#number {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 24px;
+}
+
+footer {
+  background-color: #b18bdd;
+  padding: 5rem 0;
+  background-image: linear-gradient(to bottom, rgba(77, 150, 169, 0.9), rgba(77, 150, 169, 0.9)), url("../public/mobile/image-footer.jpg");
+  background-size: cover;
+}
+footer .footer__header {
+  color: #fafafa;
+  max-width: 12ch;
+}
+footer .section__desc {
+  color: #fafafa;
+  padding: 2rem 0;
+  max-width: 27ch;
+}
+
+#small-button {
+  width: 9rem;
+}
+
+.section__buttonContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 43.75em) {
+  .section__buttonContainer {
+    flex-direction: row;
+    gap: 0 1rem;
+  }
 }/*# sourceMappingURL=app.css.map */
