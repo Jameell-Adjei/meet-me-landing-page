@@ -9,12 +9,10 @@
   </head>
   <body>
     <section class="section">
-      
       <div class="section__container">
-        <img src="public/logo.svg" alt="Site Logo" id='logo'/>
-        <div id='hero-banner'>
+        <img src="public/logo.svg" alt="Site Logo" id="logo" />
+        <div id="hero-banner">
           <img src="public/tablet/image-hero.png" alt="" />
-          <!-- <img src="/public/desktop/image-hero-right.png" alt="" /> -->
         </div>
 
         <h1 class="section__header">Group Chat for Everyone</h1>
@@ -22,12 +20,18 @@
           Meet makes it easy to connect with others face-to-face virtually and
           collaborate across any device.
         </p>
-        <button class="section__button--blue">Download  <span>v1.3</span> </button>
-        <button class="section__button">What is it?</button>
-        <div class="section__line"></div>
-        <div class="section__number">  <p class="xqcL">01</p> </div>
-      </div>
+        <div class="section__buttonContainer">
+          <button class="section__button--blue">
+            Download <span>v1.3</span>
+          </button>
+          <button class="section__button" id="small-button">What is it?</button>
 
+        </div>
+
+
+        <div class="section__line"></div>
+        <div class="section__number"><p>01</p></div>
+      </div>
 
       <div class="section__imageContainer">
         <img src="public/desktop/image-woman-in-videocall.jpg" alt="" />
@@ -38,20 +42,25 @@
     </section>
     <section class="section">
       <h3 class="section__overline">BUILT FOR MODERN USE</h3>
-      <h2 class="section__header">Smarter meetings, all in one place</h2>
-      <p class="section__desc">
+      <h2 class="section__header2">Smarter meetings, all in one place</h2>
+      <p class="section__desc" id="number_padding">
         Send messages, share files, show your screen, and record your meetings —
         all in one workspace. Control who can join with invite-only team access,
         data encryption, and data export.
       </p>
     </section>
-    <footer class="footer">
+
+    <div id="number">
+      <div class="section__line"></div>
+      <div class="section__number"><p>02</p></div>
+    </div>
+    <footer class="section">
       <h2 class="footer__header">Experience more together</h2>
-      <p class="footer__desc">
+      <p class="section__desc">
         Stay connected with reliable HD meetings and unlimited one-on-one and
         group video sessions.
       </p>
-      <button class="section__button">Download<span>v1.3</span></button>
+      <button class="section__button">Download<span> v1.3</span></button>
     </footer>
   </body>
 </html>
