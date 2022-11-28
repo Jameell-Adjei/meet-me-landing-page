@@ -11,8 +11,11 @@
 }
 body {
   background-color: variables.$alabaster;
+  overflow-x: hidden;
 }
-p , h1, h2 {
+p,
+h1,
+h2 {
   text-align: center;
 }
 button {
@@ -29,13 +32,27 @@ button {
 
 #hero-banner {
   overflow: hidden;
+  @include mixins.breakpoint("laptop") {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 100vw;
+  }
+
   img {
     width: 110%;
     transform: translateX(-16px);
 
-    @include mixins.breakpoint("tablet"){
+    @include mixins.breakpoint("tablet") {
       width: 108%;
       transform: translateX(-27px);
+    }
+
+    @include mixins.breakpoint("laptop") {
+      width: 25%;
+      min-width: 230px;
+      max-width: 450px;
+      transform: translateX(0);
     }
   }
 }
@@ -55,7 +72,7 @@ button {
 .section__button--blue {
   background-color: variables.$secondary-color;
   color: variables.$alabaster;
-  
+
   &:hover {
     background-color: variables.$downy;
   }
@@ -70,7 +87,7 @@ button {
 
   &:hover {
     background-color: #b18bdd;
-    @include mixins.breakpoint("tablet"){
+    @include mixins.breakpoint("tablet") {
       background-color: variables.$lavender;
     }
   }
@@ -82,7 +99,10 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  // gap: 1.2rem 0;
+  gap: 1.2rem 0;
+  @include mixins.breakpoint("laptop") {
+    flex-direction: row;
+  }
 }
 
 .section__header {
@@ -92,7 +112,7 @@ button {
   max-width: 10ch;
 }
 
-.section__header2{
+.section__header2 {
   line-height: 2.1rem;
   max-width: 14ch;
   padding: 2rem 0.8rem;
@@ -105,7 +125,7 @@ button {
   padding: 0 1rem;
   padding-bottom: 2rem;
   max-width: 38ch;
-  @include mixins.breakpoint("tablet"){
+  @include mixins.breakpoint("tablet") {
     max-width: 52ch;
   }
 }
@@ -124,7 +144,6 @@ button {
   padding: 0.8rem;
   background-color: variables.$alabaster;
 
-
   p {
     font-weight: 900;
     font-size: 1rem;
@@ -139,14 +158,14 @@ button {
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   padding: 2rem 0;
-  @include mixins.breakpoint("tablet"){
+  @include mixins.breakpoint("tablet") {
     display: block;
   }
   img {
     width: 130px;
     height: auto;
     border-radius: 5%;
-    @include mixins.breakpoint("tablet"){
+    @include mixins.breakpoint("tablet") {
       width: 9rem;
       margin: 0 0.2rem;
     }
@@ -168,7 +187,12 @@ button {
 footer {
   background-color: #b18bdd;
   padding: 5rem 0;
-  background-image: linear-gradient(to bottom, rgb(variables.$secondary-color, 0.9), rgb(variables.$secondary-color, 0.9)), url('../public/mobile/image-footer.jpg');
+  background-image: linear-gradient(
+      to bottom,
+      rgb(variables.$secondary-color, 0.9),
+      rgb(variables.$secondary-color, 0.9)
+    ),
+    url("../public/mobile/image-footer.jpg");
   background-size: cover;
 
   .footer__header {
@@ -192,8 +216,39 @@ footer {
   align-items: center;
   flex-direction: column;
 
-  @include mixins.breakpoint("tablet"){
+  @include mixins.breakpoint("tablet") {
     flex-direction: row;
     gap: 0 1rem;
   }
+}
+
+#tablet-hero {
+  @include mixins.breakpoint("laptop") {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.desktop-hero {
+  display: none;
+  visibility: hidden;
+  @include mixins.breakpoint("laptop") {
+    display: block;
+    visibility: visible;
+    position: relative;
+  }
+}
+
+.section__infoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#left {
+  translate: -8%;
+}
+
+#right {
+  translate: 8%;
 }

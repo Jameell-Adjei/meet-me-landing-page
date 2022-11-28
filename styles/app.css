@@ -10,9 +10,12 @@
 
 body {
   background-color: #fafafa;
+  overflow-x: hidden;
 }
 
-p, h1, h2 {
+p,
+h1,
+h2 {
   text-align: center;
 }
 
@@ -31,6 +34,14 @@ button {
 #hero-banner {
   overflow: hidden;
 }
+@media (min-width: 51.25em) {
+  #hero-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 100vw;
+  }
+}
 #hero-banner img {
   width: 110%;
   transform: translateX(-16px);
@@ -39,6 +50,14 @@ button {
   #hero-banner img {
     width: 108%;
     transform: translateX(-27px);
+  }
+}
+@media (min-width: 51.25em) {
+  #hero-banner img {
+    width: 25%;
+    min-width: 230px;
+    max-width: 450px;
+    transform: translateX(0);
   }
 }
 
@@ -84,6 +103,12 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1.2rem 0;
+}
+@media (min-width: 51.25em) {
+  .section__container {
+    flex-direction: row;
+  }
 }
 
 .section__header {
@@ -204,4 +229,37 @@ footer .section__desc {
     flex-direction: row;
     gap: 0 1rem;
   }
+}
+
+@media (min-width: 51.25em) {
+  #tablet-hero {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.desktop-hero {
+  display: none;
+  visibility: hidden;
+}
+@media (min-width: 51.25em) {
+  .desktop-hero {
+    display: block;
+    visibility: visible;
+    position: relative;
+  }
+}
+
+.section__infoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#left {
+  translate: -8%;
+}
+
+#right {
+  translate: 8%;
 }/*# sourceMappingURL=app.css.map */
