@@ -10,7 +10,7 @@
   font-family: "Red Hat Display", sans-serif;
 }
 body {
-  background-color: variables.$alabaster;
+  background-color: variables.$primary-color;
   overflow-x: hidden;
 }
 p,
@@ -72,7 +72,7 @@ button {
 
 .section__button--blue {
   background-color: variables.$secondary-color;
-  color: variables.$alabaster;
+  color: variables.$primary-color;
 
   &:hover {
     background-color: variables.$downy;
@@ -107,6 +107,7 @@ button {
 }
 
 .section__header {
+  color: variables.$header-color;
   font-size: 2.5rem;
   line-height: 2.5rem;
   max-width: 10ch;
@@ -118,29 +119,37 @@ button {
   max-width: 14ch;
   padding: 2rem 0.8rem;
   font-size: 2rem;
+
+  @include mixins.breakpoint("tablet"){
+    max-width: 15ch;
+  }
 }
 .section__desc {
   line-height: 1.5rem;
   font-size: 1rem;
-  color: variables.$manatee;
+  color: variables.$primary-text-color;
   padding: 0 1rem;
   padding-bottom: 2rem;
   max-width: 38ch;
   @include mixins.breakpoint("tablet") {
     max-width: 52ch;
   }
+
+  @include mixins.breakpoint("laptop") {
+    max-width: 43ch;
+  }
 }
 #logo {
   padding: 3rem 0;
 }
 .section__line {
-  border-left: 0.01px solid variables.$manatee;
+  border-left: 0.01px solid variables.$primary-text-color;
   height: 4rem;
   opacity: 0.25;
   margin-top: 2.5rem;
 }
 .section__number {
-  border: lighten($color: variables.$manatee, $amount: 25%) 1px solid;
+  border: lighten($color: variables.$primary-text-color, $amount: 25%) 1px solid;
   border-radius: 50%;
   padding: 1.2rem;
   background-color: variables.$primary-color;
@@ -148,7 +157,7 @@ button {
   p {
     font-weight: 900;
     font-size: 1rem;
-    color: variables.$manatee;
+    color: variables.$primary-text-color;
     opacity: 1;
   }
 }
