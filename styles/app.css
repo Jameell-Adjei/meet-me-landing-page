@@ -54,10 +54,11 @@ button {
 }
 @media (min-width: 51.25em) {
   #hero-banner img {
-    width: 25%;
+    width: 33%;
     min-width: 230px;
-    max-width: 450px;
+    max-width: 370px;
     transform: translateX(0);
+    align-self: flex-start;
   }
 }
 
@@ -114,11 +115,11 @@ button {
 .section__header {
   font-size: 2.5rem;
   line-height: 2.5rem;
-  padding: 2rem 1rem;
   max-width: 10ch;
 }
 
-.section__header2 {
+.section__secondaryHeader {
+  color: #28283d;
   line-height: 2.1rem;
   max-width: 14ch;
   padding: 2rem 0.8rem;
@@ -140,7 +141,7 @@ button {
 }
 
 #logo {
-  padding: 2rem 0;
+  padding: 3rem 0;
 }
 
 .section__line {
@@ -153,7 +154,7 @@ button {
 .section__number {
   border: #cdcdd6 1px solid;
   border-radius: 50%;
-  padding: 0.8rem;
+  padding: 1.2rem;
   background-color: #fafafa;
 }
 .section__number p {
@@ -168,7 +169,7 @@ button {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
-  padding: 2rem 0;
+  padding: 4rem 0;
 }
 @media (min-width: 43.75em) {
   .section__imageContainer {
@@ -285,9 +286,19 @@ footer {
 }
 
 #left {
-  translate: -8%;
+  translate: -6%;
+}
+@media (min-width: 125em) {
+  #left {
+    translate: -8%;
+  }
 }
 
 #right {
-  translate: 8%;
+  translate: 6%;
+}
+@media (min-width: 125em) {
+  #right {
+    translate: 8%;
+  }
 }/*# sourceMappingURL=app.css.map */
