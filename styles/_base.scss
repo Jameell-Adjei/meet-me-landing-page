@@ -183,7 +183,34 @@ button {
   position: relative;
   top: 24px;
 }
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
+  @include mixins.breakpoint("laptop") {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .footer__header {
+    color: variables.$primary-color;
+    max-width: 12ch;
+
+    @include mixins.breakpoint("laptop") {
+      text-align: left;
+    }
+  }
+
+  .section__desc {
+    color: variables.$primary-color;
+    padding: 2rem 0;
+    max-width: 47ch;
+    @include mixins.breakpoint("laptop") {
+      text-align: left;
+      max-width: 27ch;
+    }
+  }
+}
 footer {
   background-color: #b18bdd;
   padding: 5rem 0;
@@ -194,16 +221,13 @@ footer {
     ),
     url("../public/mobile/image-footer.jpg");
   background-size: cover;
-
-  .footer__header {
-    color: variables.$primary-color;
-    max-width: 12ch;
-  }
-
-  .section__desc {
-    color: variables.$primary-color;
-    padding: 2rem 0;
-    max-width: 27ch;
+  @include mixins.breakpoint("laptop"){
+    background-image: linear-gradient(
+      to bottom,
+      rgb(variables.$secondary-color, 0.9),
+      rgb(variables.$secondary-color, 0.9)
+    ),
+    url("../public/desktop/image-footer.jpg");
   }
 }
 
@@ -243,6 +267,8 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 3.5rem;
+  padding-bottom: 2rem;
 }
 
 #left {

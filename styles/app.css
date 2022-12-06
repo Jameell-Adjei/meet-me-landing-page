@@ -199,20 +199,48 @@ button {
   top: 24px;
 }
 
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 51.25em) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+.footer .footer__header {
+  color: #fafafa;
+  max-width: 12ch;
+}
+@media (min-width: 51.25em) {
+  .footer .footer__header {
+    text-align: left;
+  }
+}
+.footer .section__desc {
+  color: #fafafa;
+  padding: 2rem 0;
+  max-width: 47ch;
+}
+@media (min-width: 51.25em) {
+  .footer .section__desc {
+    text-align: left;
+    max-width: 27ch;
+  }
+}
+
 footer {
   background-color: #b18bdd;
   padding: 5rem 0;
   background-image: linear-gradient(to bottom, rgba(77, 150, 169, 0.9), rgba(77, 150, 169, 0.9)), url("../public/mobile/image-footer.jpg");
   background-size: cover;
 }
-footer .footer__header {
-  color: #fafafa;
-  max-width: 12ch;
-}
-footer .section__desc {
-  color: #fafafa;
-  padding: 2rem 0;
-  max-width: 27ch;
+@media (min-width: 51.25em) {
+  footer {
+    background-image: linear-gradient(to bottom, rgba(77, 150, 169, 0.9), rgba(77, 150, 169, 0.9)), url("../public/desktop/image-footer.jpg");
+  }
 }
 
 #small-button {
