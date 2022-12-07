@@ -59,10 +59,7 @@ button {
 }
 
 .section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
+  @extend %centerColumn;
   .section__overline {
     font-size: 1rem;
     letter-spacing: 0.25rem;
@@ -97,9 +94,7 @@ button {
   }
 }
 .section__container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @extend %centerColumn;
   gap: 1.2rem 0;
   @include mixins.breakpoint("laptop") {
     flex-direction: row;
@@ -200,17 +195,12 @@ button {
 }
 
 #number {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @extend %centerColumn;
   position: relative;
   top: 24px;
 }
 .footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
+  @extend %centerColumn;
   @include mixins.breakpoint("laptop") {
     flex-direction: row;
     justify-content: space-evenly;
@@ -259,10 +249,7 @@ footer {
 }
 
 .section__buttonContainer {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-
+  @extend %centerColumn;
   @include mixins.breakpoint("tablet") {
     flex-direction: row;
     gap: 0 1rem;
