@@ -111,6 +111,12 @@ button {
   font-size: 2.5rem;
   line-height: 2.5rem;
   max-width: 10ch;
+  padding-bottom: 1rem;
+
+  @include mixins.breakpoint("laptop"){
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
 }
 
 .section__secondaryHeader {
@@ -178,6 +184,13 @@ button {
     @include mixins.breakpoint("tablet") {
       width: 9rem;
       margin: 0 0.2rem;
+    }
+
+    @include mixins.breakpoint("laptop") {
+      min-width: 150px;
+      max-width: 300px;
+      width: 20%;
+      margin: 0 1.2rem;
     }
   }
 }
@@ -274,17 +287,23 @@ footer {
 }
 
 .section__infoContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @extend %centerColumn;
   padding-top: 3.5rem;
   padding-bottom: 2rem;
 }
 
 #left {
-  translate: -8%;
+  translate: -6%;
+
+  @include mixins.breakpoint("largeScreens"){
+    translate: -8%;
+  }
 }
 
 #right {
-  translate: 8%;
+  translate: 6%;
+
+  @include mixins.breakpoint("largeScreens"){
+    translate: 8%
+  }
 }
