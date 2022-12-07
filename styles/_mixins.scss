@@ -1,23 +1,20 @@
 // Breakpoints map: 1em = 16px
- 
-$breakpoints: ( 
-    tablet : 43.75em,
-    laptop: 51.25em,
-    desktop: 93.75em,
-    largeScreens : 125em
+
+$breakpoints: (
+  tablet: 43.75em,
+  laptop: 51.25em,
+  desktop: 93.75em,
+  largeScreens: 125em,
 );
 
-
-
-@mixin breakpoint ($size) {
-    @media (min-width: map-get($breakpoints, $size)) {
-        @content;
-    }
+@mixin breakpoint($size) {
+  @media (min-width: map-get($breakpoints, $size)) {
+    @content;
+  }
 }
 
 %centerColumn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-  
