@@ -89,8 +89,10 @@ button {
   color: #fafafa;
 }
 
-.section__button--blue:hover {
-  background-color: #71c0d4;
+@media (hover: hover) {
+  .section__button--blue:hover {
+    background-color: #71c0d4;
+  }
 }
 
 .section__button--blue span {
@@ -102,11 +104,7 @@ button {
   color: #fafafa;
 }
 
-.section__button:hover {
-  background-color: #b18bdd;
-}
-
-@media (min-width: 43.75em) {
+@media (hover: hover) {
   .section__button:hover {
     background-color: #b18bdd;
   }
